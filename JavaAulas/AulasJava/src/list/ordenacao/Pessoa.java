@@ -1,9 +1,5 @@
 package list.ordenacao;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class Pessoa implements Comparable<Pessoa> {
     private String nome;
     private int idade;

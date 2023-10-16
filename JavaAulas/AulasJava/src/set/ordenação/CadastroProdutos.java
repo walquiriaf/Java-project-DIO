@@ -21,13 +21,13 @@ public class CadastroProdutos {
         return produtosPorNome;
     }
 
-    public Set<Produto> exibirProdutosPorPreco() {
-        Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPreco());
-        if (!produtoSet.isEmpty()) {
-          produtosPorPreco.addAll(produtoSet);
-          return produtosPorPreco;
-        } else {
-          throw new RuntimeException("O conjunto está vazio!");
-        }
-      }
+    //public Set<Produto> exibirProdutosPorPreco() {
+    //    Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPreco());
+    //    if (!produtoSet.isEmpty()) {
+    //      produtosPorPreco.addAll(produtoSet);
+    //      return produtosPorPreco;
+    //    } else {
+    //      throw new RuntimeException("O conjunto está vazio!");
+    //    }
+    //  }
 }

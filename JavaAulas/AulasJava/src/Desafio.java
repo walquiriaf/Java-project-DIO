@@ -3,21 +3,24 @@ import java.util.Scanner;
 public class Desafio {
     
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    try (Scanner scanner = new Scanner(System.in)) {
+      String entrada = scanner.nextLine();
+      String[] partes = entrada.split(",");
 
-    String entrada = scanner.nextLine();
-    String[] partes = entrada.split(",");
-
-    //  Solicitar ao usuário que forneça os valores necessários para criar uma Transacao.
-    if (partes.length == 4) {
-        String data = partes[0];
-        String hora = partes[1];
-        String descricao = partes[2];
-        double valor = Double.parseDouble(partes[3]);
-  
-        Transacao transacao = new Transacao(data, hora, descricao, valor);
-        transacao.imprimir();
-      } 
+      //  Solicitar ao usuário que forneça os valores necessários para criar uma Transacao.
+      if (partes.length == 4) {
+          String data = partes[0];
+          String hora = partes[1];
+          String descricao = partes[2];
+          double valor = Double.parseDouble(partes[3]);
+ 
+          Transacao transacao = new Transacao(data, hora, descricao, valor);
+          transacao.imprimir();
+        }
+    } catch (NumberFormatException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    } 
     }
 }
 
